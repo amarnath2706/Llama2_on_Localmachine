@@ -11,7 +11,8 @@ B_SYS, E_SYS = "<<SYS>>\n", "\n<</SYS>>\n\n" #system prompt token
 instruction = "Convert the following text from English to German : \n\n {text}"
 
 #template
-SYSTEM_PROMPT = B_SYS + DEFAULT_SYSTEM_PROMPT + E_SYS #getting the system prompt
+#SYSTEM_PROMPT = B_SYS + DEFAULT_SYSTEM_PROMPT + E_SYS #getting the system prompt
+SYSTEM_PROMPT = B_SYS + CUSTOM_SYSTEM_PROMPT + E_SYS #getting the system prompt by adding custom system prompt
 template = B_INST + SYSTEM_PROMPT + instruction + E_INST #create the final template
 
 #prompt template
